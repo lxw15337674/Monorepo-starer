@@ -2,7 +2,8 @@
   "name": "monorepo",
   "version": "1.0.0",
   "scripts": {
-    "components:dev": "pnpm --filter components docs:dev"
+    "components:dev": "pnpm --filter components docs:dev",
+    "components:debug": "pnpm --filter components debug"
   },
   "files": [
     "dist",
@@ -29,7 +30,8 @@
     "gh-pages": "^4.0.0",
     "git-cz": "^4.9.0",
     "lint-staged": "^13.0.3",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "vitepress-theme-demoblock": "^3.0.3"
   },
   "config": {
     "commitizen": {

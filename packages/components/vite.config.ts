@@ -1,11 +1,18 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
+import path from 'path';
+
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [vue()],
   base: './',
+  resolve: {
+    alias: {
+      '@': path.resolve(__dirname, 'src'),
+    },
+  },
   build: {
     target: 'modules',
     //打包文件目录
@@ -46,4 +53,4 @@ export default defineConfig({
       formats: ['es', 'cjs'],
     },
   },
-})
+});

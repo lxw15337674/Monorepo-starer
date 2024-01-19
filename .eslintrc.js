@@ -1,33 +1,32 @@
 module.exports = {
-  env: {
-    browser: true,
-    es2021: true,
-    es6: true,
-    worker: true,
-  },
-  extends: [
-    'alloy',
-    'alloy/react',
-    'plugin:react/recommended',
-    'eslint:recommended',
-  ],
-  parser: '@typescript-eslint/parser',
-  parserOptions: {
-    ecmaFeatures: {
-      jsx: true,
+    "env": {
+        "browser": true,
+        "es2021": true
     },
-    ecmaVersion: 13,
-    sourceType: 'module',
-  },
-  globals: {
-    NodeJS: true,
-  },
-  plugins: ['react', 'react-hooks', '@typescript-eslint'],
-  rules: {
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
-    'react/display-name': 'off',
-    'no-param-reassign': 'off',
-    'max-params': '4',
-  },
-};
+    "extends": [
+        "standard-with-typescript",
+        "plugin:vue/vue3-essential"
+    ],
+    "overrides": [
+        {
+            "env": {
+                "node": true
+            },
+            "files": [
+                ".eslintrc.{js,cjs}"
+            ],
+            "parserOptions": {
+                "sourceType": "script"
+            }
+        }
+    ],
+    "parserOptions": {
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "vue"
+    ],
+    "rules": {
+    }
+}
