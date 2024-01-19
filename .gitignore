@@ -39,3 +39,11 @@ packages/wwhooks/docs-dist/umi.server.js
 build/**
 dist/**
 .next/**
+
+
+node_modules
+dist
+.DS_Store
+.cache
+.temp
+coverage

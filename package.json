@@ -1,7 +1,9 @@
 {
   "name": "monorepo",
   "version": "1.0.0",
-  "scripts": {},
+  "scripts": {
+    "components:dev": "pnpm --filter components docs:dev"
+  },
   "files": [
     "dist",
     "package.json",
