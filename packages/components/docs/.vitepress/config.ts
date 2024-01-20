@@ -1,9 +1,7 @@
 import { defineConfig } from 'vitepress';
 import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar';
 import { applyPlugins } from '@ruabick/md-demo-plugins';
-
-
-
+import vuese from 'markdown-it-vuese';
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'My Awesome Project',
@@ -12,6 +10,7 @@ export default defineConfig({
   markdown: {
     config: (md) => {
       applyPlugins(md);
+      md.use(vuese);
     },
   },
   vite: {
