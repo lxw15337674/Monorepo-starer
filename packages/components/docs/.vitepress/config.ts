@@ -1,9 +1,7 @@
 import { defineConfig } from 'vitepress';
 import AutoSidebar from 'vite-plugin-vitepress-auto-sidebar';
-import {
-  demoblockPlugin,
-  demoblockVitePlugin,
-} from 'vitepress-theme-demoblock';
+import { applyPlugins } from '@ruabick/md-demo-plugins';
+
 
 
 // https://vitepress.dev/reference/site-config
@@ -13,12 +11,11 @@ export default defineConfig({
   srcDir: '../src',
   markdown: {
     config: (md) => {
-      md.use(demoblockPlugin);
+      applyPlugins(md);
     },
   },
   vite: {
     plugins: [
-      demoblockVitePlugin(),
       AutoSidebar({
         path: 'src',
         // titleFromFile: true,

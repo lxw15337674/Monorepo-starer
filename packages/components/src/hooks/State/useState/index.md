@@ -1,24 +1,11 @@
-<script setup>
-import CustomComponent from './demo/demo.vue'
-</script>
-# useBoolean
+# useState
 
 管理 boolean 状态的 Hook
 
 
 ## 代码演示
-<CustomComponent  title="基本用法"
-  desc="切换 boolean，可以接收默认值。"/>
-
-<demo path="./demo/demo.vue"
-  language="vue"
-  title="基本用法"
-  desc="切换 boolean，可以接收默认值。"></demo>
-
-  <demo src="./demo/demo2.vue"
-  language="vue"
-  title="基本用法"
-  desc="切换 boolean，可以接收默认值。"> </demo>
+<demo src="./demo/demo.vue" title="标题" desc="描述"></demo>
+<demo src="./demo/demo2.vue" title="标题" desc="描述"></demo>
 
 ## API
 

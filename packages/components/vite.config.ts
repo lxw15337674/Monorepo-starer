@@ -1,12 +1,12 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import { resolve } from 'path'
+import { defineConfig } from 'vite';
+import vue from '@vitejs/plugin-vue';
+import { resolve } from 'path';
 import path from 'path';
-
+import VitePluginVitepressDemo from 'vite-plugin-vitepress-demo';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
+  plugins: [vue(), VitePluginVitepressDemo()],
   base: './',
   resolve: {
     alias: {
